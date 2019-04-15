@@ -1,0 +1,75 @@
+﻿@model WebApplication1.Models.MasterProduct
+
+<div>
+    <h4>MasterProduct</h4>
+    <hr />
+  
+    <dl class="dl-horizontal">
+     
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.LeadTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LeadTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiploadTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShiploadTime)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.MainPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MainPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SalesPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+       
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.AutoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AutoId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CriticalStock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CriticalStock)
+        </dd>
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
