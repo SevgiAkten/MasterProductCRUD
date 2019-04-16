@@ -20,6 +20,7 @@ namespace WebApplication1.Controllers
         {
             ViewBag.BrandId = db.Brand.ToList();
             ViewBag.CategoryId = db.Category.ToList();
+
             return View();
         }
 
@@ -33,7 +34,7 @@ namespace WebApplication1.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    masterProduct.Id = Guid.NewGuid();
+                    //masterProduct.Id = Guid.NewGuid();
                     
                     db.MasterProduct.Add(masterProduct);
                     db.SaveChanges();
@@ -94,6 +95,12 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult result()
+        {
+            //this is form test the branch
+            return View();
         }
 
     }

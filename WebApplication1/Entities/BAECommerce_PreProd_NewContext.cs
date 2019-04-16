@@ -1234,7 +1234,7 @@ namespace WebApplication1.Models
 
                 entity.Property(e => e.AutoId)
                     .HasColumnName("AutoID")
-                    .ValueGeneratedOnAdd();
+                    .ValueGeneratedOnAddOrUpdate();
 
                 entity.Property(e => e.BoxDepth).HasDefaultValueSql("((0))");
 

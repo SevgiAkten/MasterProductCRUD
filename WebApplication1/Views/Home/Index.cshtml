@@ -1,53 +1,53 @@
 ﻿@model IEnumerable<WebApplication1.Models.MasterProduct>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table id="myTable" class="display" style="width:100%">
-        <thead>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="myTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>LeadTime</th>
+            <th>ShiploadTime</th>
+            <th>MainPrice</th>
+            <th>SalesPrice</th>
+            <th>Discount</th>
+            <th>BrandId</th>
+            <th>CategoryId</th>
+            <th>AutoID</th>
+            <th>CriticalStock</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>LeadTime</th>
-                <th>ShiploadTime</th>
-                <th>MainPrice</th>
-                <th>SalesPrice</th>
-                <th>Discount</th>
-                <th>BrandId</th>
-                <th>CategoryId</th>
-                <th>AutoID</th>
-                <th>CriticalStock</th>
-                <th>Operation</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>@item.LeadTime</td>
-                    <td>@item.ShiploadTime</td>
-                    <td>@item.MainPrice</td>
-                    <td>@item.SalesPrice</td>
-                    <td>@item.Discount</td>
-                    <td>@item.BrandId</td>
-                    <td>@item.CategoryId</td>
-                    <td>@item.AutoId</td>
-                    <td>@item.CriticalStock</td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id}) |
-                        @Html.ActionLink("Details", "Details", new { item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { item.Id })
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.LeadTime</td>
+                <td>@item.ShiploadTime</td>
+                <td>@item.MainPrice</td>
+                <td>@item.SalesPrice</td>
+                <td>@item.Discount</td>
+                <td>@item.BrandId</td>
+                <td>@item.CategoryId</td>
+                <td>@item.AutoId</td>
+                <td>@item.CriticalStock</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
 
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    
-    <script>
-  $(function(){
-      $("#myTable").dataTable();
-  })
-    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $("#myTable").dataTable();
+    })
+</script>
