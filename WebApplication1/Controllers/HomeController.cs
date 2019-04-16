@@ -103,5 +103,11 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult result2()
+        {
+            //this is form test the branch
+            return View();
+        }
+
     }
 }
